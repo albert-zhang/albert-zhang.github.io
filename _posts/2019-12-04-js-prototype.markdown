@@ -93,7 +93,7 @@ It's not the standard of ECMAScript, but has become the de facto standard of the
 
 如果有constructor A，那么`class B extends A`的结果是：
 
-- B的原型是A，即`B.__proto__ ===A`
+- B的原型是A，即`B.__proto__ === A`
 - B是一个新的constructor，也自带一个prototype属性，且`B.prototype.constructor === B`，与定义一个function同理
 - `new B().__proto__ === B.prototype`，与new一个function同理
 
