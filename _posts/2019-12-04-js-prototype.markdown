@@ -78,6 +78,12 @@ const obj = new SomeFunction();
 obj.__proto__ === SomeFunction.prototpye;
 ```
 
+当`new SomeFunction()`时，具体过程是：
+
+- 创建一个新对象
+- 执行`SomeFunction`的代码，其this即为刚才创建的对象
+- 如果SomeFunction返回了一个对象，则结果就为此对象；否则（无返回值或返回一个基础类型的值（boolean、number、string、undefined））返回刚才创建的新对象
+
 ## 关于`Object.create`
 
 ```javascript
